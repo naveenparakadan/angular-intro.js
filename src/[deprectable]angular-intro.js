@@ -119,7 +119,7 @@
 
 		function onBeforeChange(cb) {
 			return intro.onbeforechange(function (targetElement) {
-				if(angular.isFunction(cb)) cb(targetElement);
+				if(angular.isFunction(cb)) cb(targetElement, this._introItems[this._currentStep]);
 			});
 		}
 
